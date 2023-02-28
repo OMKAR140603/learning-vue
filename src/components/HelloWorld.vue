@@ -1,12 +1,13 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msge }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
     <h3>Installed CLI Plugins</h3>
+    <HomeComponent></HomeComponent>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
@@ -20,6 +21,7 @@
       <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
     </ul>
     <h3>Ecosystem</h3>
+    
     <ul>
       <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
       <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
@@ -29,12 +31,15 @@
     </ul>
   </div>
 </template>
-
 <script>
+import HomeComponent from '../components/Home'
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msge: String
+  },
+  components: {
+    HomeComponent,
   }
 }
 </script>
@@ -54,5 +59,8 @@ li {
 }
 a {
   color: #42b983;
+}
+h1{
+  color: chartreuse;
 }
 </style>
